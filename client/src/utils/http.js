@@ -1,4 +1,4 @@
-async function request(method, url) {
+async function request(url) {
 
     const options = {
         headers: {
