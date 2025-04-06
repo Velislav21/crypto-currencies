@@ -1,4 +1,4 @@
-async function request(url) {
+async function request(method, url) {
 
     const options = {
         headers: {
@@ -6,6 +6,11 @@ async function request(url) {
             'x-cg-demo-api-key': `${import.meta.env.VITE_APP_API_KEY}`
         }
     }
+
+    if (method !== 'GET') {
+        options.method = method
+    }
+
     const response = await fetch(url, options);
 
     if (!response.ok) {
