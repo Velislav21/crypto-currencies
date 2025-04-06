@@ -1,0 +1,36 @@
+.header {
+    padding: 1.5em 10%;
+    border-bottom: 2px solid rgb(163, 162, 162);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header a {
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+.links-container {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
+.links-container li a {
+    font-size: 1.5em;
+}
+a.site-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+div.select-menu-container select {
+    padding: 0.3em 0.5em;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    color: #fff;
+    box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.3);
+}
+div.select-menu-container select option {
+    background-color: rgb(142, 167, 105);
+}
