@@ -24,6 +24,7 @@ a.site-title {
     font-weight: bold;
 }
 div.select-menu-container select {
+    cursor: pointer;
     padding: 0.3em 0.5em;
     background-color: transparent;
     border: 1px solid white;

@@ -6,7 +6,7 @@ import styles from "./Header.module.css"
 export default function Header() {
     return (
         <header className={styles["header"]}>
-            <Link to="#" className={styles["site-title"]}>Crypto Currencies</Link>
+            <Link to="/" className={styles["site-title"]}>Cryptocurrencies</Link>
             <ul className={styles["links-container"]}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
