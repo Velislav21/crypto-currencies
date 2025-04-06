@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { useGetCoins } from "../hooks/coinsAPI/useGetCoins";
+import { useGetCoins } from "../hooks/cryptoAPI";
 
 export const CoinsContext = createContext();
 

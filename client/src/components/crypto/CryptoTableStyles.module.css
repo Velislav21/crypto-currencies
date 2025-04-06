@@ -1,19 +1,23 @@
 .table {
-    max-width: 50em;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto 2em auto;
     border-radius: 0.3rem;
     font-size: 1.4em;
     color: #fff;
-    background: -webkit-linear-gradient(181deg, #618468,#cdcf7d);                                                                                 
+    background: -webkit-linear-gradient(181deg, #618468, #cdcf7d);
 }
 .table-row {
+    max-width: 800px;
     color: #fff;
-    padding: 0.5em 0.7em;
+    padding: 0.5em 1.2em;
     display: grid;
     align-items: center;
     grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
     text-decoration: none;
     border-bottom: 1.5px solid rgb(120, 120, 120);
+    &:last-child {
+        border-bottom: none;
+    }
 }
 .table-row div {
     display: flex;
@@ -28,6 +32,7 @@
 
 .m-cap {
     text-align: right;
+    margin-left: 1em;
 }
 .price-movement-percentage {
     text-align: center;
