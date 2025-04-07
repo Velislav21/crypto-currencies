@@ -12,5 +12,8 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
+  },
+  define: {
+    'process.env.VITE_APP_API_KEY': JSON.stringify(process.env.VITE_APP_API_KEY)
   }
 })
