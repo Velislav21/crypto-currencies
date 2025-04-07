@@ -1,23 +1,29 @@
 import { useParams } from "react-router"
-import { useGetCoinDetails } from "../../../hooks/cryptoAPI"
+import { useGetCoinChartData, useGetCoinDetails } from "../../../hooks/cryptoAPI"
 import { formatNumber } from "../../../utils/formatNumber";
 import Spinner from "../../spinner/Spinner";
 
 import styles from "./CryptoItemDetails.module.css"
+import CryptoChart from "../crypto-chart/CryptoChart";
 
 export default function CryptoItemDetails() {
 
     const { coinId } = useParams()
-    const { coinDetails, isPending } = useGetCoinDetails(coinId);
-    console.log(coinDetails)
+    const { coinDetails, isDetailsDataPending } = useGetCoinDetails(coinId);
+    const { coinChartData, isChartDataPending } = useGetCoinChartData(coinId)
     return (
         <>
-            {isPending ? <Spinner />
+            {isDetailsDataPending || isChartDataPending ? <Spinner />
                 :
                 <div className={styles["details-container"]}>
                     <div className={styles["coin-name"]}>
                         <img src={coinDetails.image.large} alt="" />
                         <p>{coinDetails.name} ({coinDetails.symbol.toUpperCase()})</p>
+                    </div>
+                    <div className={styles["chart-container"]}>
+                        <CryptoChart
+                            coinChartData={coinChartData}
+                        />
                     </div>
                     <div className={styles["coin-details"]}>
                         <ul>
@@ -26,7 +32,7 @@ export default function CryptoItemDetails() {
                         </ul>
                         <ul>
                             <li>Current Price</li>
-                            <li>$ {formatNumber(coinDetails.market_data.current_price.usd)}</li> 
+                            <li>$ {formatNumber(coinDetails.market_data.current_price.usd)}</li>
                             {/* switch currency */}
                         </ul>
                         <ul>

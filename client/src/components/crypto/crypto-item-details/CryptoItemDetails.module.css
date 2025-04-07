@@ -19,6 +19,12 @@
     gap: 1.5em;
     margin: 0em auto 2em;
 }
+.chart-container {
+    height: 250px;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 2em;
+}
 .coin-name p {
     text-align: center;
     color: #fff;

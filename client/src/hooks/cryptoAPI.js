@@ -23,7 +23,7 @@ export function useGetCoins() {
 export function useGetCoinDetails(coinId) {
 
     const [coinDetails, setCoinDetails] = useState({});
-    const [isPending, setIsPending] = useState(true);
+    const [isDetailsDataPending, setIsPending] = useState(true);
 
     useEffect(() => {
 
@@ -34,7 +34,23 @@ export function useGetCoinDetails(coinId) {
 
 
     return {
-        coinDetails, isPending
+        coinDetails, isDetailsDataPending
     }
+}
 
+export function useGetCoinChartData(coinId) {
+    const [isChartDataPending, setIsChartDataPending] = useState(true);
+    const [coinChartData, setCoinChartData] = useState({ prices: [] });
+
+    useEffect(() => {
+
+        http.get(`${BASE_URL}/coins/${coinId}/market_chart?vs_currency=usd&days=10&interval=daily`)
+            .then(setCoinChartData)
+            .finally(() => setIsChartDataPending(false))
+
+    }, [])
+
+    return {
+        coinChartData, isChartDataPending
+    }
 }
