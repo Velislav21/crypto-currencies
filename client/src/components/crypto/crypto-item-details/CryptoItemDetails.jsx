@@ -34,20 +34,20 @@ export default function CryptoItemDetails() {
                         </ul>
                         <ul>
                             <li>Current Price</li>
-                            <li>{currencyData.currencySymbol} {formatNumber(coinDetails.market_data.current_price.usd)}</li>
+                            <li>{currencyData.currencySymbol} {formatNumber(coinDetails.market_data.current_price[currencyData.currency])}</li>
                             {/* switch currency */}
                         </ul>
                         <ul>
                             <li>Market Cap</li>
-                            <li>{currencyData.currencySymbol} {formatNumber(coinDetails.market_data.market_cap.usd)}</li>
+                            <li>{currencyData.currencySymbol} {formatNumber(coinDetails.market_data.market_cap[currencyData.currency])}</li>
                         </ul>
                         <ul>
                             <li>24H Hour High</li>
-                            <li>{currencyData.currencySymbol} {formatNumber(coinDetails.market_data.high_24h.usd)}</li>
+                            <li>{currencyData.currencySymbol} {formatNumber(coinDetails.market_data.high_24h[currencyData.currency])}</li>
                         </ul>
                         <ul>
                             <li>24H Hour Low</li>
-                            <li>{currencyData.currencySymbol} {formatNumber(coinDetails.market_data.low_24h.usd)}</li>
+                            <li>{currencyData.currencySymbol} {formatNumber(coinDetails.market_data.low_24h[currencyData.currency])}</li>
                         </ul>
                     </div>
                 </div>
