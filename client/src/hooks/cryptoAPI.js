@@ -23,9 +23,18 @@ export function useGetCoins() {
 export function useGetCoinDetails(coinId) {
 
     const [coinDetails, setCoinDetails] = useState({});
+    const [isPending, setIsPending] = useState(true);
+
+    useEffect(() => {
+
+        http.get(`${BASE_URL}/coins/${coinId}`)
+            .then(setCoinDetails)
+            .finally(() => setIsPending(false));
+    }, [])
+
 
     return {
-        coinDetails
+        coinDetails, isPending
     }
 
 }

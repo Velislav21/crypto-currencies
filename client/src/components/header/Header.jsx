@@ -10,7 +10,6 @@ export default function Header() {
             <ul className={styles["links-container"]}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
-                <li><Link to="#">Unknown</Link></li>
             </ul>
             <div className={styles["select-menu-container"]}>
                 <select name="currency-menu">

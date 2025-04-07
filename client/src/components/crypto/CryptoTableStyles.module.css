@@ -4,6 +4,7 @@
     border-radius: 0.3rem;
     font-size: 1.4em;
     color: #fff;
+    font-weight: bold;
     background: -webkit-linear-gradient(181deg, #618468, #cdcf7d);
 }
 .table-row {
@@ -32,8 +33,15 @@
 
 .m-cap {
     text-align: right;
-    margin-left: 1em;
+    margin-left: 2em;
 }
-.price-movement-percentage {
+
+.price-movement-percentage-negative {
     text-align: center;
+    color: rgb(226, 29, 29)
 }
+.price-movement-percentage-positive {
+    text-align: center;
+    color: rgb(44, 231, 44);
+}
+
