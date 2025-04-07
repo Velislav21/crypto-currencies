@@ -6,7 +6,7 @@ import styles from "../../crypto/CryptoTableStyles.module.css"
 export default function CryptoTable() {
 
     const { coins, isPending } = useCoinsContext();
-    console.log(coins, isPending)
+    console.log(coins)
     return <div className={styles["table"]}>
         <div className={styles["table-row"]}>
             <p>#</p>
@@ -15,6 +15,6 @@ export default function CryptoTable() {
             <p>24H Change</p>
             <p className={styles["m-cap"]}>Market Cap</p>
         </div>
-        <CryptoTableItem />
+        {coins.map(coinData => <CryptoTableItem key={coinData.id} {...coinData}/>)}
     </div>
 }

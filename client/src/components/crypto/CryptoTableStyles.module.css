@@ -8,7 +8,6 @@
     background: -webkit-linear-gradient(181deg, #618468, #cdcf7d);
 }
 .table-row {
-    max-width: 800px;
     color: #fff;
     padding: 0.5em 1.2em;
     display: grid;
@@ -33,12 +32,11 @@
 
 .m-cap {
     text-align: right;
-    margin-left: 2em;
 }
 
 .price-movement-percentage-negative {
     text-align: center;
-    color: rgb(226, 29, 29)
+    color: rgb(219, 24, 24)
 }
 .price-movement-percentage-positive {
     text-align: center;
