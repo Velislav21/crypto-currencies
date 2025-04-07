@@ -1,12 +1,10 @@
 import CryptoTableItem from "../crypto-table-item/CryptoTableItem"
-import useCoinsContext from "../../../hooks/useCoinsContext"
 
 import styles from "../../crypto/CryptoTableStyles.module.css"
 import Spinner from "../../spinner/Spinner";
 
-export default function CryptoTable() {
+export default function CryptoTable({ coins, isPending }) {
 
-    const { coins, isPending } = useCoinsContext();
     return (
         <>
             {isPending ? <Spinner /> :
@@ -18,7 +16,7 @@ export default function CryptoTable() {
                         <p>24H Change</p>
                         <p className={styles["m-cap"]}>Market Cap</p>
                     </div>
-                    {coins.map(coinData => <CryptoTableItem key={coinData.id} {...coinData} />)}
+                    {coins.slice(0, 10).map(coinData => <CryptoTableItem key={coinData.id} {...coinData} />)}
                 </div>
             }
         </>

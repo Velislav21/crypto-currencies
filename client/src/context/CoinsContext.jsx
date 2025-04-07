@@ -13,9 +13,9 @@ export function CoinsContextProvider({ children }) {
 
     useEffect(() => {
         http.get(`${BASE_URL}/coins/markets?vs_currency=${currencyData.currency}`) // !todo make it dynamic
-            .then(coins => setCoins(coins.slice(0, 10)))
+            .then(coins => setCoins(coins))
             .finally(() => setIsPending(false));
-    }, [currencyData.currency])
+    }, [currencyData])
 
     return (
         <CoinsContext.Provider value={{ coins, isPending, currencyData, setCurrencyData }}>

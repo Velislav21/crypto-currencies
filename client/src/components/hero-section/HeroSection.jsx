@@ -1,17 +1,19 @@
 import styles from "./HeroSection.module.css"
 
-export default function HeroSection() {
+export default function HeroSection({ submitSearchHandler, changeInputHandler }) {
     return (
         <>
             <div className={styles["hero-section"]}>
                 <h1>Cryptocurrencies List</h1>
                 <p>Welcome to the largest crypto marketplace</p>
-                <form>
+                <form onSubmit={submitSearchHandler}>
                     <input
+                        required
                         type="text"
                         placeholder="Search crypto"
+                        onChange={changeInputHandler}
                     />
-                    <button>Search</button>
+                    <button type="submit">Search</button>
                 </form>
             </div>
         </>
