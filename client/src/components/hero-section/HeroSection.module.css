@@ -25,7 +25,7 @@ div.hero-section form {
     padding: 0.5em 1em;
     width: 80%;
 }
-div.hero-section form input{
+div.hero-section form input {
     flex: 1;
     font-size: 1.2em;
     padding: 0.3em 0.7em;
@@ -42,5 +42,10 @@ div.hero-section form button {
     padding: 0.5em 1em;
     border-radius: 0.3rem;
     color: #6f6f6f;
-    background: linear-gradient(181deg, #b0e8bb,#cdcf7d)                                             ;
+    background: linear-gradient(181deg, #b0e8bb, #cdcf7d);
+    
+    &:hover {
+        background: linear-gradient(181deg, #b1b1b1, #cdcf7d);
+        color: #fff;
+    }
 }
