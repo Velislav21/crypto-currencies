@@ -12,7 +12,7 @@ async function request(method, url) {
     }
 
     const response = await fetch(url, options);
-    console.log(url, options)
+    console.log(url)
     if (!response.ok) {
         const result = await response.json();
         console.log(result)
