@@ -5,9 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
+    port: process.env.PORT ? parseInt(process.env.PORT) : 4173,
+    host: true,
     proxy: {
-      port: process.env.PORT ? parseInt(process.env.PORT) : 4173,
-      host: true,
       '/api': {
         target: "https://api.coingecko.com/api/v3",
         changeOrigin: true,
