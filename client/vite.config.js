@@ -16,6 +16,6 @@ export default defineConfig({
     }
   },
   preview: {
-    allowedHosts: ["crypto-currencies-dtb1.onrender.com"]
+    allowedHosts: ["crypto-currencies-dtbl.onrender.com"]
   }
 })
