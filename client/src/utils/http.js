@@ -3,7 +3,7 @@ async function request(method, url) {
     const options = {
         headers: {
             accept: 'application/json',
-            'x-cg-demo-api-key': `CG-2X1sK37mW4GbQTcK53woF6Yi`
+            'x-cg-demo-api-key': `${import.meta.env.VITE_APP_API_KEY}`
         }
     }
 
@@ -12,7 +12,7 @@ async function request(method, url) {
     }
 
     const response = await fetch(url, options);
-
+    console.log(url, options)
     if (!response.ok) {
         const result = await response.json();
         console.log(result)
