@@ -1,5 +1,5 @@
 .table {
-    max-width: 800px;
+    max-width: clamp(320px, 12px + 70vw, 800px);
     width: 100%;
     margin: 0 auto 2em auto;
     border-radius: 0.3rem;
@@ -43,4 +43,25 @@
     text-align: center;
     color: rgb(44, 231, 44);
 }
+@media (width <= 400px) {
 
+    .table-row {
+        grid-template-columns: 0.5fr 3.5fr 2fr;
+    }
+    .price,
+    .m-cap,
+    .price {
+        text-align: right;
+    }
+
+    .m-cap,
+    .price-movement-percentage-negative,
+    .price-movement-percentage-positive,
+    div p.price-change {
+        display: none;
+    }
+    
+    main {
+        margin: 0 auto;
+    }
+}

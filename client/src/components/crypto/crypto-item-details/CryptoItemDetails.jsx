@@ -1,9 +1,11 @@
 import { useParams } from "react-router"
+
 import { useGetCoinChartData, useGetCoinDetails } from "../../../hooks/cryptoAPI"
 import { formatNumber } from "../../../utils/formatNumber";
-import Spinner from "../../spinner/Spinner";
 
 import styles from "./CryptoItemDetails.module.css"
+
+import Spinner from "../../spinner/Spinner";
 import CryptoChart from "../crypto-chart/CryptoChart";
 import useCoinsContext from "../../../hooks/useCoinsContext";
 

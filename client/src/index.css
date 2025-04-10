@@ -17,7 +17,6 @@ table {
 body {
     /* padding: 2vw; */
     background: linear-gradient(0deg, #cdcf7d, #618468);
-    min-height: 100dvh;
 }
 *,
 *::before,
@@ -36,5 +35,9 @@ a {
 div#root {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    min-height: 100dvh;
 }
+main {
+    flex-grow: 1;
+}
+

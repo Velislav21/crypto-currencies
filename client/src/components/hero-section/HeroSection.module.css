@@ -5,7 +5,6 @@ div.hero-section {
     max-width: 50em;
     color: #eee;
     margin: 2em auto;
-    padding: 2em;
     text-align: center;
 }
 div.hero-section h1 {
@@ -47,5 +46,14 @@ div.hero-section form button {
     &:hover {
         background: linear-gradient(181deg, #b1b1b1, #cdcf7d);
         color: #fff;
+    }
+}
+
+@media (width <= 400px) {
+    div.hero-section h1 {
+        font-size: 2em;
+    }
+    div.hero-section form {
+        width: 90%;
     }
 }

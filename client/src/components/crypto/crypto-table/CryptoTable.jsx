@@ -11,9 +11,9 @@ export default function CryptoTable({ coins, isPending }) {
                 <div className={styles["table"]}>
                     <div className={styles["table-row"]}>
                         <p>#</p>
-                        <p>Coins</p>
-                        <p>Price</p>
-                        <p>24H Change</p>
+                        <p>Coin</p>
+                        <p className={styles["price"]}>Price</p>
+                        <p className={styles["price-change"]}>24H Change</p>
                         <p className={styles["m-cap"]}>Market Cap</p>
                     </div>
                     {coins.slice(0, 10).map(coinData => <CryptoTableItem key={coinData.id} {...coinData} />)}
